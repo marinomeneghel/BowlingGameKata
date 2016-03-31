@@ -11,16 +11,23 @@ import XCTest
 
 class BowlingGameKataTests: XCTestCase {
     
-    let game: Game = Game()
+    var game: Game!
     
+    override func setUp() {
+        game = Game()
+    }
+    
+    override func tearDown() {
+        game = nil
+    }
     
     func testGutterGame() {
-        playGame(20, pins: 0)
+        playGame(times: 20, pins: 0)
         XCTAssertEqual(0, game.score())
     }
     
     func testAllOnes() {
-        playGame(20, pins: 1)
+        playGame(times: 20, pins: 1)
         XCTAssertEqual(20, game.score())
     }
     
@@ -28,12 +35,12 @@ class BowlingGameKataTests: XCTestCase {
         game.roll(4)
         game.roll(6)
         game.roll(3)
-        playGame(17, pins: 1)
+        playGame(times: 17, pins: 1)
         XCTAssertEqual(33, game.score())
     }
     
     
-    func playGame(rolls: Int, pins: Int) {
+    func playGame(times rolls: Int, pins: Int) {
         for _ in 1...rolls {
             game.roll(pins)
         }
