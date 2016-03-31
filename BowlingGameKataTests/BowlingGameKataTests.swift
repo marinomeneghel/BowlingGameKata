@@ -22,12 +22,12 @@ class BowlingGameKataTests: XCTestCase {
     }
     
     func testGutterGame() {
-        playGame(times: 20, pins: 0)
+        rollMany(times: 20, pins: 0)
         XCTAssertEqual(0, game.score())
     }
     
     func testAllOnes() {
-        playGame(times: 20, pins: 1)
+        rollMany(times: 20, pins: 1)
         XCTAssertEqual(20, game.score())
     }
     
@@ -35,12 +35,19 @@ class BowlingGameKataTests: XCTestCase {
         game.roll(4)
         game.roll(6)
         game.roll(3)
-        playGame(times: 17, pins: 1)
+        rollMany(times: 17, pins: 1)
         XCTAssertEqual(33, game.score())
     }
     
+    func testOneStrike() {
+        game.roll(10)
+        game.roll(4)
+        game.roll(4)
+        rollMany(times: 17, pins: 0)
+        XCTAssertEqual(26, game.score())
+    }
     
-    func playGame(times rolls: Int, pins: Int) {
+    func rollMany(times rolls: Int, pins: Int) {
         for _ in 1...rolls {
             game.roll(pins)
         }
