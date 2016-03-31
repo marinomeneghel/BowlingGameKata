@@ -8,11 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		803EF4FE1CAD23DF0056BFC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EF4FD1CAD23DF0056BFC8 /* AppDelegate.swift */; };
-		803EF5001CAD23DF0056BFC8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EF4FF1CAD23DF0056BFC8 /* ViewController.swift */; };
 		803EF5031CAD23DF0056BFC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803EF5011CAD23DF0056BFC8 /* Main.storyboard */; };
-		803EF5051CAD23DF0056BFC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 803EF5041CAD23DF0056BFC8 /* Assets.xcassets */; };
-		803EF5081CAD23DF0056BFC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 803EF5061CAD23DF0056BFC8 /* LaunchScreen.storyboard */; };
 		803EF5131CAD23E00056BFC8 /* BowlingGameKataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EF5121CAD23E00056BFC8 /* BowlingGameKataTests.swift */; };
+		803EF51F1CAD26FD0056BFC8 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803EF51E1CAD26FD0056BFC8 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +26,12 @@
 /* Begin PBXFileReference section */
 		803EF4FA1CAD23DF0056BFC8 /* BowlingGameKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowlingGameKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		803EF4FD1CAD23DF0056BFC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		803EF4FF1CAD23DF0056BFC8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		803EF5021CAD23DF0056BFC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		803EF5041CAD23DF0056BFC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		803EF5071CAD23DF0056BFC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		803EF5091CAD23DF0056BFC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		803EF50E1CAD23E00056BFC8 /* BowlingGameKataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BowlingGameKataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		803EF5121CAD23E00056BFC8 /* BowlingGameKataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BowlingGameKataTests.swift; sourceTree = "<group>"; };
 		803EF5141CAD23E00056BFC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		803EF51E1CAD26FD0056BFC8 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +73,9 @@
 		803EF4FC1CAD23DF0056BFC8 /* BowlingGameKata */ = {
 			isa = PBXGroup;
 			children = (
+				803EF51D1CAD25D60056BFC8 /* Classes */,
 				803EF4FD1CAD23DF0056BFC8 /* AppDelegate.swift */,
-				803EF4FF1CAD23DF0056BFC8 /* ViewController.swift */,
 				803EF5011CAD23DF0056BFC8 /* Main.storyboard */,
-				803EF5041CAD23DF0056BFC8 /* Assets.xcassets */,
-				803EF5061CAD23DF0056BFC8 /* LaunchScreen.storyboard */,
 				803EF5091CAD23DF0056BFC8 /* Info.plist */,
 			);
 			path = BowlingGameKata;
@@ -94,6 +88,14 @@
 				803EF5141CAD23E00056BFC8 /* Info.plist */,
 			);
 			path = BowlingGameKataTests;
+			sourceTree = "<group>";
+		};
+		803EF51D1CAD25D60056BFC8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				803EF51E1CAD26FD0056BFC8 /* Game.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,8 +179,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				803EF5081CAD23DF0056BFC8 /* LaunchScreen.storyboard in Resources */,
-				803EF5051CAD23DF0056BFC8 /* Assets.xcassets in Resources */,
 				803EF5031CAD23DF0056BFC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,8 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				803EF5001CAD23DF0056BFC8 /* ViewController.swift in Sources */,
 				803EF4FE1CAD23DF0056BFC8 /* AppDelegate.swift in Sources */,
+				803EF51F1CAD26FD0056BFC8 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,14 +227,6 @@
 				803EF5021CAD23DF0056BFC8 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		803EF5061CAD23DF0056BFC8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				803EF5071CAD23DF0056BFC8 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
