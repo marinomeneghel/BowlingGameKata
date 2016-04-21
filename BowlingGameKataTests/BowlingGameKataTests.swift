@@ -41,11 +41,20 @@ class BowlingGameKataTests: XCTestCase {
     
     func testOneStrike() {
         game.roll(10)
+        game.roll(3)
         game.roll(4)
-        game.roll(4)
-        rollMany(times: 17, pins: 0)
-        XCTAssertEqual(26, game.score())
+        rollMany(times: 16, pins: 0)
+        XCTAssertEqual(24, game.score())
     }
+    
+//    func testStrikeAndSpare() {
+//        game.roll(10)
+//        game.roll(5)
+//        game.roll(4)
+//        game.roll(3)
+//        rollMany(times: 16, pins: 1)
+//        XCTAssertEqual(52, game.score())
+//    }
     
     func rollMany(times rolls: Int, pins: Int) {
         for _ in 1...rolls {

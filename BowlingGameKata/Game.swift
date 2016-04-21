@@ -19,28 +19,39 @@ class Game {
     }
     
     func score() -> Int {
-        var result = 0
-        var ballIndex = 0
+        var score = 0
+        var frameIndex = 0
         for _ in 1...10 {
-            let rollsSum = rolls[ballIndex] + rolls[ballIndex+1]
-            if isSpare(rollsSum) {
-                result += rolls[ballIndex+2]
-            
-            } else if isStrike(ballIndex) {
-                result += rolls[ballIndex+1] + rolls[ballIndex + 2]
+            if isStrike(frameIndex) {
+                score += 10 + strikeBonus(frameIndex)
+                frameIndex += 1
+                
+            } else if isSpare(frameIndex) {
+                score += 10 + spareBonus(frameIndex)
+                frameIndex += 2
+                
+            } else {
+                score += rolls[frameIndex] + rolls[frameIndex+1]
+                frameIndex += 2
             }
-            result += rollsSum
-            ballIndex += 2
         }
-        return result
+        return score
     }
     
-    func isStrike(ballIndex: Int) -> Bool {
-        return rolls[ballIndex] == 10
+    func isStrike(frameIndex: Int) -> Bool {
+        return rolls[frameIndex] == 10
     }
     
-    func isSpare(points: Int) -> Bool {
-        return points == 10
+    func isSpare(frameIndex: Int) -> Bool {
+        return rolls[frameIndex] + rolls[frameIndex + 1] == 10
+    }
+    
+    private func strikeBonus(frameIndex: Int) -> Int {
+        return rolls[frameIndex+1] + rolls[frameIndex+2]
+    }
+    
+    private func spareBonus(frameIndex: Int) -> Int {
+        return rolls[frameIndex+2]
     }
     
 }

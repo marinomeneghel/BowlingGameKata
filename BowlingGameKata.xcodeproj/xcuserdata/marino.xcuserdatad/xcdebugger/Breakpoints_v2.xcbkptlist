@@ -2,4 +2,85 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BowlingGameKata/Game.swift"
+            timestampString = "482934029.064871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "score()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BowlingGameKataTests/BowlingGameKataTests.swift"
+            timestampString = "482934031.438452"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "testOneStrike()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BowlingGameKataTests.BowlingGameKataTests.testOneStrike () -&gt; ()"
+                  moduleName = "BowlingGameKataTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marino/Development/Samples/BowlingGameKata/BowlingGameKataTests/BowlingGameKataTests.swift"
+                  timestampString = "482934322.493214"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "502">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BowlingGameKataTests.BowlingGameKataTests.(testOneStrike () -&gt; ()).(implicit closure #1)"
+                  moduleName = "BowlingGameKataTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marino/Development/Samples/BowlingGameKata/BowlingGameKataTests/BowlingGameKataTests.swift"
+                  timestampString = "482934322.493599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "8">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "BowlingGameKataTests.BowlingGameKataTests.(testOneStrike () -&gt; ()).(implicit closure #2)"
+                  moduleName = "BowlingGameKataTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/marino/Development/Samples/BowlingGameKata/BowlingGameKataTests/BowlingGameKataTests.swift"
+                  timestampString = "482934322.493963"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "23">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

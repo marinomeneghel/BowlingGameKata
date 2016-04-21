@@ -3,13 +3,24 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "Game.isStrike(Int) -&gt; Bool:Game.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "rolls[ballIndex] == 10&#10;rolls[ballIndex] == 10&#10;rolls[ballIndex] == 10">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "Game.score() -&gt; Int:Game.swift">
          <PersistentStrings>
             <PersistentString
-               value = "rolls[i]">
+               value = "rolls[ballIndex + 2]">
             </PersistentString>
             <PersistentString
-               value = "rolls[i+1]">
+               value = "rolls[frameIndex]">
+            </PersistentString>
+            <PersistentString
+               value = "rolls[frameIndex+1]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
