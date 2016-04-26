@@ -32,15 +32,14 @@ class BowlingGameKataTests: XCTestCase {
     }
     
     func testSingleSpare() {
-        game.roll(4)
-        game.roll(6)
+        rollSpare()
         game.roll(3)
         rollMany(times: 17, pins: 1)
         XCTAssertEqual(33, game.score())
     }
     
     func testOneStrike() {
-        game.roll(10)
+        rollStrike()
         game.roll(3)
         game.roll(4)
         rollMany(times: 16, pins: 0)
@@ -55,6 +54,15 @@ class BowlingGameKataTests: XCTestCase {
 //        rollMany(times: 16, pins: 1)
 //        XCTAssertEqual(52, game.score())
 //    }
+    
+    func rollStrike() {
+        game.roll(10)
+    }
+    
+    func rollSpare() {
+        game.roll(4)
+        game.roll(6)
+    }
     
     func rollMany(times rolls: Int, pins: Int) {
         for _ in 1...rolls {
