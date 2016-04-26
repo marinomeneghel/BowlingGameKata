@@ -31,7 +31,7 @@ class Game {
                 frameIndex += 2
                 
             } else {
-                score += rolls[frameIndex] + rolls[frameIndex+1]
+                score += sumFrameBalls(frameIndex)
                 frameIndex += 2
             }
         }
@@ -44,6 +44,10 @@ class Game {
     
     func isSpare(frameIndex: Int) -> Bool {
         return rolls[frameIndex] + rolls[frameIndex + 1] == 10
+    }
+    
+    private func sumFrameBalls(frameIndex: Int) -> Int {
+        return rolls[frameIndex] + rolls[frameIndex+1]
     }
     
     private func strikeBonus(frameIndex: Int) -> Int {
